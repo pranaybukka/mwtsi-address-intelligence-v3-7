@@ -1,0 +1,7 @@
+'use client';
+import {useEffect,useRef} from 'react';
+import type {MissingHybridLine} from '@/lib/domain';
+export default function PassWarningDialog({warnings,username,busy,error,onCancel,onConfirm}:{warnings:MissingHybridLine[];username:string;busy:boolean;error:string;onCancel:()=>void;onConfirm:()=>void}){
+ const dialog=useRef<HTMLDialogElement>(null);useEffect(()=>{dialog.current?.showModal();return()=>dialog.current?.close();},[]);
+ return <dialog ref={dialog} className="decision-dialog" aria-labelledby="missing-lines-title" onCancel={event=>{event.preventDefault();if(!busy)onCancel();}}><h2 id="missing-lines-title">Missing Hybrid lines</h2><p>Before passing this record, check the following output:</p><ul>{warnings.map(w=><li key={w.block}><strong>{w.block}</strong>: missing {w.missing.map(prefix=>prefix==='1/'?'1/ Name':'3/ Country/Town').join(' and ')}.{w.nameOnly&&w.missing.includes('3/')&&' Name-only output intentionally omits 3/; you may still pass it.'}</li>)}</ul><p>You can return to review or explicitly pass anyway. This acceptance and the missing lines will be recorded as <strong>{username}</strong>. Existing validation findings remain.</p>{error&&<p className="error" role="alert">{error}</p>}<div className="decision-dialog-actions"><button className="button secondary" autoFocus disabled={busy} onClick={onCancel}>Return to review</button><button className="button primary" disabled={busy} onClick={onConfirm}>{busy?'Recording…':'Pass anyway'}</button></div></dialog>;
+}

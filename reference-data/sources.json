@@ -1,0 +1,15 @@
+{
+  "provider": "GeoNames",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Contains GeoNames data (https://www.geonames.org/), licensed under CC BY 4.0. UK full postal data: Contains Royal Mail data, Royal Mail copyright and database right 2022. Data has been normalized and indexed by MWTSI; no accuracy or deliverability warranty.",
+  "files": [
+    {"file":"countryInfo.txt","url":"https://download.geonames.org/export/dump/countryInfo.txt","kind":"countries"},
+    {"file":"admin1CodesASCII.txt","url":"https://download.geonames.org/export/dump/admin1CodesASCII.txt","kind":"admin"},
+    {"file":"cities500.zip","url":"https://download.geonames.org/export/dump/cities500.zip","entry":"cities500.txt","kind":"places"},
+    {"file":"postal-allCountries.zip","url":"https://download.geonames.org/export/zip/allCountries.zip","entry":"allCountries.txt","kind":"postal"},
+    {"file":"CA_full.csv.zip","url":"https://download.geonames.org/export/zip/CA_full.csv.zip","entry":"CA_full.txt","kind":"postal-full","country":"CA"},
+    {"file":"GB_full.csv.zip","url":"https://download.geonames.org/export/zip/GB_full.csv.zip","entry":"GB_full.txt","kind":"postal-full","country":"GB"},
+    {"file":"NL_full.csv.zip","url":"https://download.geonames.org/export/zip/NL_full.csv.zip","entry":"NL_full.txt","kind":"postal-full","country":"NL"}
+  ]
+}

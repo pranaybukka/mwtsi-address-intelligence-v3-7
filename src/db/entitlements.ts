@@ -1,0 +1,4 @@
+import {db} from './connection';
+import {ALL_ENTITLEMENTS,LEGACY_USER_ENTITLEMENTS,NO_ENTITLEMENTS,validateEntitlements,type Entitlements} from '@/lib/entitlements';
+export function userEntitlements(id:string,role:'Admin'|'User'):Entitlements{if(role==='Admin')return {...ALL_ENTITLEMENTS};const row=db().prepare('SELECT capabilities FROM auth_user_entitlements WHERE user_id=?').get(id) as {capabilities:string}|undefined;if(!row)return {...LEGACY_USER_ENTITLEMENTS};try{return validateEntitlements(JSON.parse(row.capabilities),NO_ENTITLEMENTS)}catch{return {...NO_ENTITLEMENTS}}}
+export function storeEntitlements(id:string,value:Entitlements){db().prepare('INSERT INTO auth_user_entitlements(user_id,capabilities) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET capabilities=excluded.capabilities').run(id,JSON.stringify(value));}

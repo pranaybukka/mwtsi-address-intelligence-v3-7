@@ -1,0 +1,836 @@
+{
+  "schemaVersion": 2,
+  "id": "14a75cba24111e3ce1fb",
+  "provider": "GeoNames",
+  "license": "CC BY 4.0",
+  "attribution": "Contains GeoNames data (https://www.geonames.org/), licensed under CC BY 4.0. UK full postal data: Contains Royal Mail data, Royal Mail copyright and database right 2022. Data has been normalized and indexed by MWTSI; no accuracy or deliverability warranty.",
+  "createdAt": "2026-11-07T19:29:36.818Z",
+  "files": [
+    {
+      "file": "countryInfo.txt",
+      "url": "https://download.geonames.org/export/dump/countryInfo.txt",
+      "kind": "countries",
+      "sha256": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04",
+      "retrievedAt": "2026-11-07T19:19:18.609Z"
+    },
+    {
+      "file": "admin1CodesASCII.txt",
+      "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "kind": "admin",
+      "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+      "retrievedAt": "2026-11-07T19:19:18.131Z"
+    },
+    {
+      "file": "postal-allCountries.zip",
+      "url": "https://download.geonames.org/export/zip/allCountries.zip",
+      "entry": "allCountries.txt",
+      "kind": "postal",
+      "sha256": "e080132735a81af964bb2aeced113b436ca9d5c1e23cb036dbfa11de59f98a39",
+      "retrievedAt": "2026-11-07T19:17:31.179Z"
+    },
+    {
+      "file": "CA_full.csv.zip",
+      "url": "https://download.geonames.org/export/zip/CA_full.csv.zip",
+      "entry": "CA_full.txt",
+      "kind": "postal-full",
+      "country": "CA",
+      "sha256": "826a425333db553d6fdb73b1beeebab9cfe2695b1af8e0a5d961f16098f98e01",
+      "retrievedAt": "2026-11-07T19:17:33.159Z"
+    },
+    {
+      "file": "GB_full.csv.zip",
+      "url": "https://download.geonames.org/export/zip/GB_full.csv.zip",
+      "entry": "GB_full.txt",
+      "kind": "postal-full",
+      "country": "GB",
+      "sha256": "fc2f3d2a7a146c6b6ddcf36f3a677cbd1f04a6af44402943cca1f22b5a307506",
+      "retrievedAt": "2026-11-07T19:17:34.371Z"
+    },
+    {
+      "file": "NL_full.csv.zip",
+      "url": "https://download.geonames.org/export/zip/NL_full.csv.zip",
+      "entry": "NL_full.txt",
+      "kind": "postal-full",
+      "country": "NL",
+      "sha256": "061062d797b9531297dedabf690f16f20c742383692fa27e3b4df067036ed3d6",
+      "retrievedAt": "2026-11-07T19:17:35.355Z"
+    },
+    {
+      "file": "cities500.zip",
+      "url": "https://download.geonames.org/export/dump/cities500.zip",
+      "entry": "cities500.txt",
+      "kind": "places",
+      "sha256": "bf2516f404ceefd24e099e48c8cd91730c9b1ab85158dd77eb9d943275d6b072",
+      "retrievedAt": "2026-11-07T19:19:17.675Z"
+    }
+  ],
+  "stats": {
+    "places": 1165857,
+    "aliases": 2041762,
+    "postalRelationships": 5011160,
+    "exactLookupRelationships": 4812170,
+    "countries": 123,
+    "postalCodes": 4283671,
+    "coverage": [
+      {
+        "country": "AD",
+        "relationships": 7,
+        "postalCodes": 7,
+        "lookupRelationships": 7
+      },
+      {
+        "country": "AE",
+        "relationships": 178171,
+        "postalCodes": 178171,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "AI",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "AL",
+        "relationships": 494,
+        "postalCodes": 489,
+        "lookupRelationships": 494
+      },
+      {
+        "country": "AM",
+        "relationships": 772,
+        "postalCodes": 772,
+        "lookupRelationships": 772
+      },
+      {
+        "country": "AR",
+        "relationships": 20259,
+        "postalCodes": 1976,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "AS",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "AT",
+        "relationships": 18996,
+        "postalCodes": 2501,
+        "lookupRelationships": 18996
+      },
+      {
+        "country": "AU",
+        "relationships": 18539,
+        "postalCodes": 3170,
+        "lookupRelationships": 18539
+      },
+      {
+        "country": "AX",
+        "relationships": 37,
+        "postalCodes": 37,
+        "lookupRelationships": 37
+      },
+      {
+        "country": "AZ",
+        "relationships": 1186,
+        "postalCodes": 1186,
+        "lookupRelationships": 1186
+      },
+      {
+        "country": "BD",
+        "relationships": 1349,
+        "postalCodes": 1349,
+        "lookupRelationships": 1349
+      },
+      {
+        "country": "BE",
+        "relationships": 2781,
+        "postalCodes": 1146,
+        "lookupRelationships": 2781
+      },
+      {
+        "country": "BG",
+        "relationships": 5299,
+        "postalCodes": 4359,
+        "lookupRelationships": 5299
+      },
+      {
+        "country": "BM",
+        "relationships": 112,
+        "postalCodes": 81,
+        "lookupRelationships": 112
+      },
+      {
+        "country": "BR",
+        "relationships": 5525,
+        "postalCodes": 5525,
+        "lookupRelationships": 5525
+      },
+      {
+        "country": "BY",
+        "relationships": 3131,
+        "postalCodes": 3123,
+        "lookupRelationships": 3131
+      },
+      {
+        "country": "CA",
+        "relationships": 900675,
+        "postalCodes": 899779,
+        "lookupRelationships": 900675
+      },
+      {
+        "country": "CC",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "CH",
+        "relationships": 4464,
+        "postalCodes": 3362,
+        "lookupRelationships": 4464
+      },
+      {
+        "country": "CL",
+        "relationships": 346,
+        "postalCodes": 346,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "CN",
+        "relationships": 2352,
+        "postalCodes": 2349,
+        "lookupRelationships": 2352
+      },
+      {
+        "country": "CO",
+        "relationships": 3681,
+        "postalCodes": 3681,
+        "lookupRelationships": 3681
+      },
+      {
+        "country": "CR",
+        "relationships": 473,
+        "postalCodes": 473,
+        "lookupRelationships": 473
+      },
+      {
+        "country": "CX",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "CY",
+        "relationships": 1127,
+        "postalCodes": 1125,
+        "lookupRelationships": 1127
+      },
+      {
+        "country": "CZ",
+        "relationships": 15507,
+        "postalCodes": 2694,
+        "lookupRelationships": 15507
+      },
+      {
+        "country": "DE",
+        "relationships": 23295,
+        "postalCodes": 10815,
+        "lookupRelationships": 23295
+      },
+      {
+        "country": "DK",
+        "relationships": 1159,
+        "postalCodes": 1159,
+        "lookupRelationships": 1159
+      },
+      {
+        "country": "DO",
+        "relationships": 544,
+        "postalCodes": 207,
+        "lookupRelationships": 544
+      },
+      {
+        "country": "DZ",
+        "relationships": 15951,
+        "postalCodes": 3162,
+        "lookupRelationships": 15951
+      },
+      {
+        "country": "EC",
+        "relationships": 1225,
+        "postalCodes": 1225,
+        "lookupRelationships": 1225
+      },
+      {
+        "country": "EE",
+        "relationships": 5398,
+        "postalCodes": 5293,
+        "lookupRelationships": 5398
+      },
+      {
+        "country": "ES",
+        "relationships": 37866,
+        "postalCodes": 11150,
+        "lookupRelationships": 37866
+      },
+      {
+        "country": "FI",
+        "relationships": 3576,
+        "postalCodes": 3576,
+        "lookupRelationships": 3576
+      },
+      {
+        "country": "FK",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "FM",
+        "relationships": 4,
+        "postalCodes": 4,
+        "lookupRelationships": 4
+      },
+      {
+        "country": "FO",
+        "relationships": 130,
+        "postalCodes": 130,
+        "lookupRelationships": 130
+      },
+      {
+        "country": "FR",
+        "relationships": 51583,
+        "postalCodes": 20418,
+        "lookupRelationships": 51583
+      },
+      {
+        "country": "GB",
+        "relationships": 1839678,
+        "postalCodes": 1839678,
+        "lookupRelationships": 1839678
+      },
+      {
+        "country": "GF",
+        "relationships": 77,
+        "postalCodes": 77,
+        "lookupRelationships": 77
+      },
+      {
+        "country": "GG",
+        "relationships": 14,
+        "postalCodes": 10,
+        "lookupRelationships": 14
+      },
+      {
+        "country": "GI",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "GL",
+        "relationships": 33,
+        "postalCodes": 33,
+        "lookupRelationships": 33
+      },
+      {
+        "country": "GP",
+        "relationships": 105,
+        "postalCodes": 105,
+        "lookupRelationships": 105
+      },
+      {
+        "country": "GS",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "GT",
+        "relationships": 548,
+        "postalCodes": 548,
+        "lookupRelationships": 548
+      },
+      {
+        "country": "GU",
+        "relationships": 21,
+        "postalCodes": 21,
+        "lookupRelationships": 21
+      },
+      {
+        "country": "HK",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "HM",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "HN",
+        "relationships": 38,
+        "postalCodes": 37,
+        "lookupRelationships": 38
+      },
+      {
+        "country": "HR",
+        "relationships": 6774,
+        "postalCodes": 309,
+        "lookupRelationships": 6774
+      },
+      {
+        "country": "HT",
+        "relationships": 236,
+        "postalCodes": 230,
+        "lookupRelationships": 236
+      },
+      {
+        "country": "HU",
+        "relationships": 3571,
+        "postalCodes": 3046,
+        "lookupRelationships": 3571
+      },
+      {
+        "country": "ID",
+        "relationships": 81058,
+        "postalCodes": 8266,
+        "lookupRelationships": 81058
+      },
+      {
+        "country": "IE",
+        "relationships": 139,
+        "postalCodes": 139,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "IM",
+        "relationships": 87,
+        "postalCodes": 9,
+        "lookupRelationships": 87
+      },
+      {
+        "country": "IN",
+        "relationships": 155538,
+        "postalCodes": 19238,
+        "lookupRelationships": 155538
+      },
+      {
+        "country": "IO",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "IS",
+        "relationships": 195,
+        "postalCodes": 195,
+        "lookupRelationships": 195
+      },
+      {
+        "country": "IT",
+        "relationships": 18415,
+        "postalCodes": 4736,
+        "lookupRelationships": 18415
+      },
+      {
+        "country": "JE",
+        "relationships": 5,
+        "postalCodes": 4,
+        "lookupRelationships": 5
+      },
+      {
+        "country": "JP",
+        "relationships": 146447,
+        "postalCodes": 142577,
+        "lookupRelationships": 146447
+      },
+      {
+        "country": "KE",
+        "relationships": 890,
+        "postalCodes": 877,
+        "lookupRelationships": 890
+      },
+      {
+        "country": "KR",
+        "relationships": 35583,
+        "postalCodes": 34249,
+        "lookupRelationships": 35583
+      },
+      {
+        "country": "LI",
+        "relationships": 13,
+        "postalCodes": 13,
+        "lookupRelationships": 13
+      },
+      {
+        "country": "LK",
+        "relationships": 1837,
+        "postalCodes": 1833,
+        "lookupRelationships": 1837
+      },
+      {
+        "country": "LT",
+        "relationships": 21859,
+        "postalCodes": 2023,
+        "lookupRelationships": 21859
+      },
+      {
+        "country": "LU",
+        "relationships": 4519,
+        "postalCodes": 4330,
+        "lookupRelationships": 4519
+      },
+      {
+        "country": "LV",
+        "relationships": 6067,
+        "postalCodes": 697,
+        "lookupRelationships": 6067
+      },
+      {
+        "country": "MA",
+        "relationships": 1325,
+        "postalCodes": 1325,
+        "lookupRelationships": 1325
+      },
+      {
+        "country": "MC",
+        "relationships": 29,
+        "postalCodes": 1,
+        "lookupRelationships": 29
+      },
+      {
+        "country": "MD",
+        "relationships": 1753,
+        "postalCodes": 1215,
+        "lookupRelationships": 1753
+      },
+      {
+        "country": "MH",
+        "relationships": 2,
+        "postalCodes": 2,
+        "lookupRelationships": 2
+      },
+      {
+        "country": "MK",
+        "relationships": 220,
+        "postalCodes": 220,
+        "lookupRelationships": 220
+      },
+      {
+        "country": "MO",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "MP",
+        "relationships": 3,
+        "postalCodes": 3,
+        "lookupRelationships": 3
+      },
+      {
+        "country": "MQ",
+        "relationships": 100,
+        "postalCodes": 95,
+        "lookupRelationships": 100
+      },
+      {
+        "country": "MT",
+        "relationships": 73,
+        "postalCodes": 73,
+        "lookupRelationships": 0
+      },
+      {
+        "country": "MW",
+        "relationships": 491,
+        "postalCodes": 491,
+        "lookupRelationships": 491
+      },
+      {
+        "country": "MX",
+        "relationships": 144629,
+        "postalCodes": 32448,
+        "lookupRelationships": 144629
+      },
+      {
+        "country": "MY",
+        "relationships": 2813,
+        "postalCodes": 2757,
+        "lookupRelationships": 2813
+      },
+      {
+        "country": "NC",
+        "relationships": 52,
+        "postalCodes": 50,
+        "lookupRelationships": 52
+      },
+      {
+        "country": "NF",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "NL",
+        "relationships": 468791,
+        "postalCodes": 468579,
+        "lookupRelationships": 468791
+      },
+      {
+        "country": "NO",
+        "relationships": 5132,
+        "postalCodes": 5132,
+        "lookupRelationships": 5132
+      },
+      {
+        "country": "NR",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "NU",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "NZ",
+        "relationships": 1738,
+        "postalCodes": 1737,
+        "lookupRelationships": 1738
+      },
+      {
+        "country": "PA",
+        "relationships": 729,
+        "postalCodes": 729,
+        "lookupRelationships": 729
+      },
+      {
+        "country": "PE",
+        "relationships": 96937,
+        "postalCodes": 2669,
+        "lookupRelationships": 96937
+      },
+      {
+        "country": "PF",
+        "relationships": 207,
+        "postalCodes": 83,
+        "lookupRelationships": 207
+      },
+      {
+        "country": "PH",
+        "relationships": 2316,
+        "postalCodes": 2190,
+        "lookupRelationships": 2316
+      },
+      {
+        "country": "PK",
+        "relationships": 2563,
+        "postalCodes": 2560,
+        "lookupRelationships": 2563
+      },
+      {
+        "country": "PL",
+        "relationships": 72894,
+        "postalCodes": 20299,
+        "lookupRelationships": 72894
+      },
+      {
+        "country": "PM",
+        "relationships": 2,
+        "postalCodes": 1,
+        "lookupRelationships": 2
+      },
+      {
+        "country": "PN",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "PR",
+        "relationships": 177,
+        "postalCodes": 177,
+        "lookupRelationships": 177
+      },
+      {
+        "country": "PT",
+        "relationships": 206942,
+        "postalCodes": 197772,
+        "lookupRelationships": 206942
+      },
+      {
+        "country": "PW",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "PY",
+        "relationships": 8644,
+        "postalCodes": 2887,
+        "lookupRelationships": 8644
+      },
+      {
+        "country": "RE",
+        "relationships": 152,
+        "postalCodes": 151,
+        "lookupRelationships": 152
+      },
+      {
+        "country": "RO",
+        "relationships": 37915,
+        "postalCodes": 37914,
+        "lookupRelationships": 37915
+      },
+      {
+        "country": "RS",
+        "relationships": 1155,
+        "postalCodes": 1149,
+        "lookupRelationships": 1155
+      },
+      {
+        "country": "RU",
+        "relationships": 43538,
+        "postalCodes": 43538,
+        "lookupRelationships": 43538
+      },
+      {
+        "country": "SE",
+        "relationships": 18887,
+        "postalCodes": 18887,
+        "lookupRelationships": 18887
+      },
+      {
+        "country": "SG",
+        "relationships": 121154,
+        "postalCodes": 121135,
+        "lookupRelationships": 121154
+      },
+      {
+        "country": "SI",
+        "relationships": 556,
+        "postalCodes": 556,
+        "lookupRelationships": 556
+      },
+      {
+        "country": "SJ",
+        "relationships": 8,
+        "postalCodes": 8,
+        "lookupRelationships": 8
+      },
+      {
+        "country": "SK",
+        "relationships": 5233,
+        "postalCodes": 3480,
+        "lookupRelationships": 5233
+      },
+      {
+        "country": "SM",
+        "relationships": 26,
+        "postalCodes": 10,
+        "lookupRelationships": 26
+      },
+      {
+        "country": "TC",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "TH",
+        "relationships": 903,
+        "postalCodes": 771,
+        "lookupRelationships": 903
+      },
+      {
+        "country": "TR",
+        "relationships": 36307,
+        "postalCodes": 2953,
+        "lookupRelationships": 36307
+      },
+      {
+        "country": "UA",
+        "relationships": 29571,
+        "postalCodes": 26579,
+        "lookupRelationships": 29571
+      },
+      {
+        "country": "US",
+        "relationships": 41490,
+        "postalCodes": 41488,
+        "lookupRelationships": 41490
+      },
+      {
+        "country": "UY",
+        "relationships": 1964,
+        "postalCodes": 122,
+        "lookupRelationships": 1964
+      },
+      {
+        "country": "VA",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "VI",
+        "relationships": 16,
+        "postalCodes": 16,
+        "lookupRelationships": 16
+      },
+      {
+        "country": "WF",
+        "relationships": 3,
+        "postalCodes": 3,
+        "lookupRelationships": 3
+      },
+      {
+        "country": "WS",
+        "relationships": 1,
+        "postalCodes": 1,
+        "lookupRelationships": 1
+      },
+      {
+        "country": "YT",
+        "relationships": 21,
+        "postalCodes": 11,
+        "lookupRelationships": 21
+      },
+      {
+        "country": "ZA",
+        "relationships": 3919,
+        "postalCodes": 3266,
+        "lookupRelationships": 3919
+      }
+    ],
+    "counts": {
+      "countryInfo.txt": 251,
+      "admin1CodesASCII.txt": 3865,
+      "postal-allCountries.zip": 1802922,
+      "CA_full.csv.zip": 900676,
+      "GB_full.csv.zip": 1839678,
+      "NL_full.csv.zip": 468809,
+      "cities500.zip": 236876
+    },
+    "skipped": {
+      "countryInfo.txt": 1,
+      "admin1CodesASCII.txt": 0,
+      "postal-allCountries.zip": 33442,
+      "CA_full.csv.zip": 0,
+      "GB_full.csv.zip": 0,
+      "NL_full.csv.zip": 0,
+      "cities500.zip": 77
+    },
+    "gazetteerPlaces": 230416,
+    "lookupCountries": 116
+  },
+  "normalizationVersion": 3
+}

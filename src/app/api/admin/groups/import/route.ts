@@ -1,0 +1,10 @@
+import ExcelJS from 'exceljs';import {Readable} from 'node:stream';
+import {withAuth,AccessError} from '@/lib/auth';import {createGroups} from '@/db/groups';import {datasetGroups} from '@/lib/access';import {readUploadWorkbook} from '@/lib/excel/import';
+export const runtime='nodejs';
+export const POST=withAuth(async(request:Request,_context:unknown,user)=>{
+ if(Number(request.headers.get('content-length'))>3*1024*1024)throw new AccessError('Group import exceeds 2 MB',413);const form=await request.formData(),file=form.get('file');if(!(file instanceof File))throw new AccessError('Choose a CSV or XLSX file',400);const extension=file.name.split('.').at(-1)?.toLowerCase();if(!['csv','xlsx'].includes(extension??''))throw new AccessError('Choose a .csv or .xlsx file',400);if(file.size>2*1024*1024)throw new AccessError('Group import exceeds 2 MB',413);
+ const bytes=Buffer.from(await file.arrayBuffer());let workbook:ExcelJS.Workbook;
+ try{if(extension==='xlsx')workbook=await readUploadWorkbook(bytes,file.name);else{workbook=new ExcelJS.Workbook();await workbook.csv.read(Readable.from([bytes]),{map:value=>value});}}catch{throw new AccessError('The group file could not be parsed. Save a CSV or XLSX containing a Group column.',400);}
+ const sheet=workbook.worksheets.find(sheet=>{let found=false;sheet.getRow(1).eachCell(cell=>{if(cell.text.replace(/^\uFEFF/,'').trim().toLowerCase()==='group')found=true;});return found;});if(!sheet)throw new AccessError('Required column missing: Group',400);if(sheet.rowCount>10001)throw new AccessError('Maximum 10,000 group rows per import',400);let column=0;sheet.getRow(1).eachCell((cell,index)=>{if(cell.text.replace(/^\uFEFF/,'').trim().toLowerCase()==='group'){if(column)throw new AccessError('Duplicate Group columns',400);column=index;}});
+ const values:unknown[]=[];for(let row=2;row<=sheet.rowCount;row++){const value=sheet.getRow(row).getCell(column).value;if(value===null||value===undefined||value==='')continue;values.push(typeof value==='number'?String(value):value);}datasetGroups();return Response.json(createGroups(user,values));
+},true);

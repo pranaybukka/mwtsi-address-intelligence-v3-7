@@ -1,0 +1,10 @@
+'use client';
+import {useEffect,useState} from 'react';
+import type {ProcessingSettings as Settings} from '@/lib/domain';
+export default function ProcessingSettings({onChange}:{onChange:(enabled:boolean)=>void}){
+ const [settings,setSettings]=useState<Settings>({postalLookupEnabled:true}),[ready,setReady]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState('');
+ function apply(value:Settings){setSettings(value);onChange(value.postalLookupEnabled);}
+ useEffect(()=>{let alive=true;async function refresh(){try{const response=await fetch('/api/settings');if(!response.ok)throw Error();const value=await response.json();if(alive){setSettings(value);onChange(value.postalLookupEnabled);setReady(true);setError('');}}catch{if(alive)setError('Could not load processing settings. Reload to try again.');}}refresh();return()=>{alive=false;};},[onChange]);
+ async function toggle(){setBusy(true);setError('');try{const response=await fetch('/api/settings',{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({postalLookupEnabled:!settings.postalLookupEnabled})});const value=await response.json();if(!response.ok)throw Error(value.error||'Could not save processing settings');apply(value);}catch(e){setError(e instanceof Error?e.message:'Could not save processing settings');}finally{setBusy(false);}}
+ return <details className="card tools-card processing-settings" open><summary>Processing settings</summary><label className="postal-toggle"><span>Postal code lookup <strong>{settings.postalLookupEnabled?'On':'Off'}</strong></span><input type="checkbox" role="switch" aria-label="Postal code lookup" checked={settings.postalLookupEnabled} disabled={!ready||busy} onChange={toggle}/></label><p className="fineprint">When off, postal codes will not be used to suggest a missing town or city, and manual postal lookup is disabled.</p><p className="fineprint">New batches save the postal lookup setting; running and saved batches keep their captured postal lookup setting.</p>{busy&&<p role="status">Saving settings…</p>}{error&&<p role="alert">{error}</p>}</details>;
+}

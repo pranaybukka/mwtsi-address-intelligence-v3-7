@@ -1,0 +1,23 @@
+import {beforeAll,describe,it,expect} from 'vitest';
+import {ensureSeed} from '../src/db/seed';
+import {reference} from '../src/lib/reference/sqlite';
+import {processAddress} from '../src/lib/process';
+import seed from '../src/db/seed-data.json';
+beforeAll(()=>ensureSeed());
+const run=(a:string,bank?:string)=>processAddress({Name:'BENEFICIARY',Address1:'100 EXAMPLE ROAD',Address2:'SUITE 5',Address3:a,Bank_Country:bank},reference,'test');
+describe('international and country safety regressions',()=>{
+ it.each([['BERLIN 10117 GERMANY','BERLIN','DE'],['MADRID 28014 SPAIN','MADRID','ES'],['ROMA 00186 ITALY','ROMA','IT'],['TORONTO ON M5H 1J9 CANADA','TORONTO','CA'],['SAO PAULO SP 04571-010 BRAZIL','SAO PAULO','BR'],['TOKYO 100-0005 JAPAN','TOKYO','JP'],['SYDNEY NSW 2000 AUSTRALIA','SYDNEY','AU'],['SINGAPORE 018960 SINGAPORE','SINGAPORE','SG']])('%s',(text,town,country)=>{const r=run(text);expect(r.intelligence.structured.town).toBe(town);expect(r.intelligence.structured.country).toBe(country);expect(r.intelligence.structured.subdivision).not.toMatch(/^(IN|ID|MA)$/);expect(r.validation.duplication).toBe('PASS');});
+ it('AD suffix is not country evidence',()=>expect(run('Attn: Commercial Property Claims AD').intelligence.country.value).not.toBe('AD'));
+ it('Hong Kong conservative CENTRAL',()=>{const r=run('CENTRAL HONG KONG');expect(r.intelligence.structured.town).toBe('CENTRAL');expect(r.intelligence.structured.country).toBe('HK');expect(r.status).toBe('PROPOSED_REVIEW_REQUIRED');});
+ it('bank authority wins conflict, blocks auto',()=>{const r=run('BERLIN 10117 GERMANY','CA');expect(r.intelligence.country.value).toBe('CA');expect(r.validation.evidenceConflict).toBe(true);expect(r.status).toBe('PROPOSED_REVIEW_REQUIRED');});
+ it('unknown fallback cannot auto',()=>expect(run('UNLISTED LOCALITY').status).toBe('PROPOSED_REVIEW_REQUIRED'));
+ it('name-only classification',()=>expect(processAddress({Name:'NAME',Address1:'',Address2:'',Address3:''},reference,'n').status).toBe('NAME_ONLY'));
+ it('Dubai locality removed with audit',()=>{const r=run('DUBAI UAE');expect(r.intelligence.sanitized[2]).toBe('');expect(r.intelligence.localityAudit.length).toBeGreaterThan(0);expect(r.hybrid.lines.filter(x=>x.startsWith('2/')).join(' ')).not.toContain('DUBAI');});
+ it('global cases include all requested markets and >=40% nonUS',()=>{const nonUS=seed.places.filter(x=>x[0]!=='US');expect(nonUS.length/seed.places.length).toBeGreaterThanOrEqual(.4);for(const [c,t,s,z] of nonUS){const country=reference.countries().find(x=>x.code===c)!;const r=run([t,s,z.split('|')[0],country.name].filter(Boolean).join(' '));expect(r.intelligence.country.value,`${t}: country`).toBe(c);expect(r.hybrid.lines.length).toBeLessThanOrEqual(4);expect(r.source.Address3).toContain(t);}});
+});
+it('one freeform container may contain street and locality together',()=>{const r=processAddress({Name:'TEST',Address1:'100 MAIN STREET BOSTON MA 02110',Address2:'',Address3:''},reference,'single');expect(r.intelligence.structured.town).toBe('BOSTON');expect(r.intelligence.structured.primary).toBe('100 MAIN STREET');expect(r.intelligence.sanitized[0]).toBe('100 MAIN STREET');});
+it('street country name cannot override postal/town',()=>{const r=processAddress({Name:'TEST',Address1:'1055 W GEORGIA ST',Address2:'UNIT 800',Address3:'VANCOUVER BC V6E 3P3'},reference,'georgia');expect(r.intelligence.country.value).toBe('CA');});
+it('keeps CENTRAL as meaningful street-name content',()=>{const r=processAddress({Name:'TEST',Address1:'18 QUEENS ROAD CENTRAL',Address2:'ROOM 2208',Address3:'CENTRAL HONG KONG'},reference,'queens');expect(r.intelligence.structured.primary).toBe('18 QUEENS ROAD CENTRAL');expect(r.validation.duplication).toBe('PASS');});
+it('known postal/town mismatch blocks automatic translation',()=>{const r=processAddress({Name:'TEST',Address1:'100 EXAMPLE ROAD',Address2:'',Address3:'BERLIN 80331 GERMANY'},reference,'mismatch');expect(r.status).toBe('PROPOSED_REVIEW_REQUIRED');expect(r.validation.evidenceConflict).toBe(true);});
+it('recognizes full subdivision names and exports resolved name evidence',()=>{const r=processAddress({Name:'TEST',Address1:'100 EXAMPLE ROAD',Address2:'',Address3:'TORONTO ONTARIO M5H 1J9 CANADA'},reference,'province');expect(r.intelligence.subdivision.value).toBe('ON');expect(r.intelligence.subdivision.displayName).toBe('ONTARIO');expect(r.intelligence.sanitized[2]).toBe('');});
+it('WASHINGTON city does not override independent DC subdivision',()=>{const r=processAddress({Name:'TEST',Address1:'50 K STREET NW',Address2:'SUITE 620',Address3:'WASHINGTON DC 20001'},reference,'dc');expect(r.intelligence.structured.subdivision).toBe('DC');expect(r.intelligence.structured.secondary).toBe('SUITE 620');});

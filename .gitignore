@@ -1,0 +1,14 @@
+node_modules/
+.next/
+*.tsbuildinfo
+.env*
+data/*.db*
+data/uploads/
+attachments/
+playwright-report/
+test-results/
+
+data/*.sqlite*
+reference-data/sources/*
+
+.mwtsi/

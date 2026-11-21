@@ -1,0 +1,12 @@
+# v3.5.0 verification
+
+- Full default unit/integration suite: **624 passed,10 skipped**,45 test files passed/3 skipped. Skips are opt-in supplied/long-name workbooks and installed expanded-reference tests that require their explicit environment paths. No result is claimed for those skipped fixtures.
+- New batch/preview/API/changes-export coverage:31 tests. Exact Key+Group, missing/duplicate keys, independent ORP, old provenance, reference revision/cache invalidation, reuse attribution, pending bulk edits, reservations, stale atomic rejection, access changes, request validation, expiry/deletion,1,000 cap, approved/net/no-op/reverted changes, Unicode chunks, inert formulas and actual distinct export tracking.
+- TypeScript typecheck and production build pass. Existing export-directory tracing warning remains.
+- Production Chromium:32 workflows across new tools, server pagination/reservations/background exports, export tracking, dual BNP/ORP review, review canvas and live ISO postal output. Rendering checks cover320/390/768/1440 widths and Dark/Light modes. Admin and assigned-Group User paths included.
+- Separate local scale probe: two25,000-record dual-block batches,25 exact Groups/Keys,249 source-only changes. Comparison8,332ms; last20-item page3ms;1,000-record bulk preview638ms. Approximate peakRSS398MiB. These are single-process development-host measurements using cloned analyzed templates, not address-engine reruns or concurrent-user capacity guarantees.
+- No new dependency or startup-script changes. Every non-root dependency lock entry compared against the immutable v3.4 baseline.
+
+The signed3.4→3.5 patch additionally undergoes a real installed-app check/apply, externalSQLite data-preservation fingerprints and production Admin/User smoke testing before publication. See the release verification JSON on the download page for final patch hashes and completed results.
+
+Native Windows/macOS browser execution is not claimed: automated browsers ran Linux Chromium. The application uses the existing platform-independent upload/patch mechanisms. A new25k address-engine regression was not rerun; the default suite covers priority/parser/review regressions, and the scale probe covers the new batch operations separately. Static download Site preview is unavailable because the managed preview helper is absent; source links, archives, hashes, access and native deployment are checked.

@@ -1,0 +1,12 @@
+{
+  "worksheet": "Customers",
+  "fields": {
+    "Name": "Client Full Name",
+    "Address1": "Street Text",
+    "Address2": "Extra Address",
+    "Address3": "Locality Text",
+    "Bank_Country": "Bank ISO",
+    "Group": "Desk"
+  },
+  "keyColumn": "External Key"
+}

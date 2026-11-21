@@ -1,0 +1,90 @@
+{
+  "bic-directory.mjs": {
+    "sha256": "c74c82d3f5a6b94e541283d8ca220259ec24256045a23138450adb8ab3ba3902",
+    "bytes": 7747
+  },
+  "embedded.css": {
+    "sha256": "2f1e9a3f5e16933d62e672d1273e4accdeec530b7a664650f554aaa650bbb990",
+    "bytes": 904
+  },
+  "index.html": {
+    "sha256": "87a9a9e53cf71bdcb94c1a77131903c847c14996030a13d857ba2f1d7deeeacc",
+    "bytes": 2619
+  },
+  "style.css": {
+    "sha256": "7a6756aca8591e2dc75e3299f5ea879300bbc17702f1eacfb81bc65b667d5fc8",
+    "bytes": 26566
+  },
+  "bic-ui.mjs": {
+    "sha256": "84d449f6cdd4d122b55b5cfb81d5e38e1cd586d9a26f7dbc5719c2ca4ffe10e7",
+    "bytes": 15367
+  },
+  "app.mjs": {
+    "sha256": "d061306f5c4d6ac2600aae86346a54ce3772c7b4c246fbc94f4504d28406fd94",
+    "bytes": 50886
+  },
+  "engine.mjs": {
+    "sha256": "0225b9cfbc9fb0e4cadd8307f018626702365238125468751b1f4d97fd328c1e",
+    "bytes": 12735
+  },
+  "assets/mwtsi-mark.svg": {
+    "sha256": "3eb01ff97218892f9b07a10e722cb3feb62fbbb6a34ca2bcd8a3aacbf495ccbf",
+    "bytes": 320
+  },
+  "schemas/head.001.001.03.xsd": {
+    "sha256": "c5a71062ad04a7af4cc178e9946d8c83fe99172fa0f491e0555c7f8903676e62",
+    "bytes": 19040
+  },
+  "schemas/pain.001.001.09.xsd": {
+    "sha256": "de038b373e47b0077b1832ddd81f4b2f1eb25d35721f62da1e38b7f5a09fda24",
+    "bytes": 56918
+  },
+  "schemas/head.001.001.02.xsd": {
+    "sha256": "730d4f342859b57be250b4215973adc36c7e60b0c48f171e1b4b5584dc355247",
+    "bytes": 18842
+  },
+  "schemas/pacs.008.001.08.xsd": {
+    "sha256": "cf048155f70cacd03f1f1dfadf66cba8752be93c249c267351782fd6adb023f7",
+    "bytes": 58040
+  },
+  "schemas/pacs.009.001.08.xsd": {
+    "sha256": "2f695939eb9be156bf2f14a26fbeb0f3bead73037fb03fd219ad14ceb19905ec",
+    "bytes": 57089
+  },
+  "schemas/sources.json": {
+    "sha256": "b9aab1146fad9bf40bb344a8f5dda9936c8c511dd2823ef5be51b584a021d6d4",
+    "bytes": 1482
+  },
+  "data/bic-directory-2.json": {
+    "sha256": "527b46c6045888619976aa459344029a824bccfc0ec906eb2c578bcd88e7fee8",
+    "bytes": 10173629
+  },
+  "data/bic-directory-1.json": {
+    "sha256": "8bd5ef8dfc6531f626352ba7c6f31a86c8e98bbeb4c771eb0d71afd6bde50dc4",
+    "bytes": 10338443
+  },
+  "data/bic-source.json": {
+    "sha256": "2735df918447ea21030ded4acc993bbba9c2cca2d190bdd2c2e992cea94d2fa0",
+    "bytes": 766
+  },
+  "data/README.txt": {
+    "sha256": "3af291e34bb6edc15783712e66d4f26efe41003558002654d3c18aad8e737283",
+    "bytes": 588
+  },
+  "vendor/xmllint/index-browser.mjs": {
+    "sha256": "4b87283c88b01bd6302956223a471c5e5aac1398d9dc8382c3869f863520e733",
+    "bytes": 5743
+  },
+  "vendor/xmllint/COPYING": {
+    "sha256": "74f6fb26dabad238799d4c3bf65c26bbb1c82b7cbaefe6e9443cd7d091947cc9",
+    "bytes": 1178
+  },
+  "vendor/xmllint/xmllint-browser.mjs": {
+    "sha256": "5f5a2c17be12d398c640f3b494e7ded8cd8c9b0175d2c65e6f197a28b77fd01e",
+    "bytes": 28042
+  },
+  "vendor/xmllint/xmllint.wasm": {
+    "sha256": "4e3cc21a67e8dd40ccb59822e4193fd1923b4cda08b40fe8ff8973de5eed9515",
+    "bytes": 778732
+  }
+}

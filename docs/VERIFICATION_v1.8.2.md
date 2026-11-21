@@ -1,0 +1,13 @@
+# v1.8.2 verification
+
+241 unit/integration tests passed in 22 files, with the supplied 200-row interpretation workbook, the 18,000-row Name/Address1 corpus and installed expanded-reference tests enabled. Existing Hybrid priorities, Name handling, postal lookup, mapping, Group, acceptance, export, recovery and reference-management regressions pass.
+
+Fourteen new tests verify the default On setting, upgrades preserving postal configuration, atomic independent setting patches, exact output-city matching (including missing-town placeholders and literal NOTPROVIDED), Off retaining pending status, unchanged findings/source/confidence, excluded named-city/name-only/error results, prior-decision preservation, atomic system event/version persistence, both pinned values across checkpoints/pause/resume, legacy job behavior, interaction with postal lookup and exported automatic acceptance evidence. Baseline manual acceptance/API/workflow tests explicitly disable the new automatic rule so they continue exercising manual decisions.
+
+28 Linux Chromium browser checks passed against the built production server with the full expanded reference. Two new checks verify On creating a visible system acceptance with failed validation retained and exported evidence; and Off surviving reload, leaving the same missing-city output pending with manual acceptance available, preserving the postal toggle and leaving saved decisions unchanged. The original postal-setting browser tests explicitly turn automatic acceptance Off to isolate their manual review flow.
+
+TypeScript typecheck and production build passed. The full dependency audit reports zero vulnerabilities; no dependencies were added or updated. Native Windows/macOS browser verification remains pending, while existing filename/path/MIME simulations pass. Earlier production-only installation and reference lifecycle limits are recorded in VERIFICATION_v1.8.md and VERIFICATION_v1.8.1.md.
+
+The new default applies to newly created batches. Existing/resumed batches without the flag retain manual-review behavior. The system acceptance is saved with each result and its record version in one SQLite transaction; checkpoint retries do not duplicate events. This release preserves the processing engine and findings; automatic acceptance does not certify address completeness, postal deliverability or payment readiness. See AUTO_APPROVE_NOTPROVIDED_CITY.md for behavior and audit fields.
+
+No customer database, local configuration, uploaded workbook, reference cache, token or draft is distributed in the source ZIP. Both default-On options are defined in source. The reference snapshot and its country-dependent coverage/rights are documented separately in EXPANDED_REFERENCE_DATA.md.

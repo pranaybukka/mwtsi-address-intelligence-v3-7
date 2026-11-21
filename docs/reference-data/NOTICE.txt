@@ -1,0 +1,7 @@
+GeoNames data: https://www.geonames.org/
+Source downloads: https://download.geonames.org/export/zip/ and https://download.geonames.org/export/dump/
+License: Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+Contains Royal Mail data. Royal Mail copyright and database right 2022 (UK full postal data; notice supplied by GeoNames).
+MWTSI has normalized, deduplicated, indexed and classified these sources, including excluding area-only codes from full-code lookup and separating gazetteer localities from postal delivery names. This is a modified, derived reference database, not an official GeoNames or postal-operator certification.
+No warranty of accuracy, completeness, currency, deliverability, bank acceptance or compliance. See upstream readmes for national coverage and partial-code restrictions.
+The source manifest records origin URLs, SHA-256 checksums and retrieval metadata. User-supplied CSV/Numbers attachments were not used in this verified snapshot.

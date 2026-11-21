@@ -1,0 +1,8 @@
+import {it,expect} from 'vitest';
+import {outputLoss,reviewIssue,reviewLineLabels} from '../src/lib/review-display';
+it('labels actual slash lines without exposing rule candidate identifiers',()=>{expect(reviewLineLabels(['1/FIRST','1/SECOND','2/STREET','2/POSTAL','3/US/BOSTON'])).toEqual(['Name','Name continued','Address','Address continued','Country / town']);});
+it('keeps empty and unknown output safe to display',()=>{expect(reviewLineLabels([])).toEqual([]);expect(reviewLineLabels(['INVALID'])).toEqual(['Output']);});
+it('translates omitted rule fields into human address labels without changing the stored entry',()=>{const entry={field:'2c',value:'2/SUITE 8',reason:'Dropped due to Hybrid line priority'};expect(outputLoss(entry)).toEqual({label:'Secondary address',value:'SUITE 8',reason:'Did not fit within the available output lines.'});expect(entry.value).toBe('2/SUITE 8');});
+it('preserves literal name tails and truncation reasons',()=>{expect(outputLoss({field:'Name',value:'2/TAIL',reason:'Truncated after 66 characters'})).toEqual({label:'Name',value:'2/TAIL',reason:'Truncated after 66 characters'});});
+it('keeps operational findings readable while reserving rule-code explanations for Admin',()=>{const issue='Postal/Subdivision 2z omitted despite available priority capacity';expect(reviewIssue(issue,true)).toBe(issue);expect(reviewIssue(issue,false)).not.toContain('2z');expect(reviewIssue('Name required',false)).toBe('Name required');expect(reviewIssue('Town unresolved',false)).toBe('Town unresolved');});
+it('replaces internal candidate-mismatch wording for User without hiding a format warning',()=>{expect(reviewIssue('Candidates do not match the required segmentation',false)).toContain('format review');});

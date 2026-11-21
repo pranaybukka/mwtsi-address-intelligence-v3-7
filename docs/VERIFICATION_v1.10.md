@@ -1,0 +1,13 @@
+# v1.10.0 verification
+
+258 unit/integration tests passed in 24 files with the supplied 200-row interpretation workbook, full 18,000-row Name/Address1 corpus and installed expanded-reference tests enabled. Existing Hybrid priorities, Name, legacy review APIs, mapping, Group/status selection, export, retired automatic approval, recovery and reference-management regressions continue to pass.
+
+Eleven new Pass/Fail cases cover initials-only Pass with an empty audited reason, initials/reason Fail, saved edited-proposal snapshots with immutable source, missing/invalid initials and reasons, stale/conflicting submissions, decisions on automatic/error records, atomic versioned bulk Pass, summary/filter classification, full export fields and source-key/fallback identity. Legacy ACCEPT/APPROVE/REJECT/EDIT behavior remains tested separately.
+
+34 Linux Chromium browser checks passed against the built production server. Three new cases verify Key/Name heading and leading-zero key preservation, top Pass/Fail button geometry, review reasons below the heading and before the comparison, initials-only Pass popup, Cancel preserving pending state, required initials/reason on Fail, exported decision evidence, mobile popup bounds and Escape returning focus without losing edits. Existing edit/Name/postal/bulk browser cases now use the new Pass flow. Desktop review, Pass popup and Fail popup screenshots use synthetic data and were visually inspected.
+
+Typecheck and production build passed. Full dependency audit reports zero vulnerabilities; no dependency change or destructive schema migration was needed. Native Windows/macOS browser certification remains pending; existing cross-platform filename/path/MIME simulations pass. Narrow-screen tests use Linux Chromium viewport emulation.
+
+New decisions use PASS/FAIL events and PASSED/FAILED states. Pass saves no reason; Fail requires one. Both preserve source and findings and capture the reviewed proposal. Audit events and record versions commit atomically; repeated/stale decisions cannot silently overwrite existing decisions. Existing source+Hybrid exports retain their concise layout; Full analysis adds decision/initials/time/reason evidence. Existing historical decisions are not rewritten and automatic town approval remains removed.
+
+Current behavior, field/API details and key fallback rules are documented in PASS_FAIL_REVIEW.md. Earlier reference/host constraints are retained in previous verification documents and EXPANDED_REFERENCE_DATA.md. The source ZIP excludes customer databases, uploads, settings, drafts, caches and tokens. Included screenshots contain fictional data. Synthetic regression success does not certify worldwide postal accuracy or payment readiness.

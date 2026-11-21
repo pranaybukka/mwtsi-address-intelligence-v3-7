@@ -1,0 +1,625 @@
+{
+  "places": [
+    [
+      "US",
+      "BOSTON",
+      "MA",
+      "02110|02109-1201",
+      ""
+    ],
+    [
+      "US",
+      "WORCESTER",
+      "MA",
+      "01608",
+      ""
+    ],
+    [
+      "US",
+      "PROVIDENCE",
+      "RI",
+      "02903",
+      ""
+    ],
+    [
+      "US",
+      "NEW YORK",
+      "NY",
+      "10003",
+      "NEW YORK CITY"
+    ],
+    [
+      "US",
+      "CHICAGO",
+      "IL",
+      "60601",
+      ""
+    ],
+    [
+      "US",
+      "PHILADELPHIA",
+      "PA",
+      "19103",
+      ""
+    ],
+    [
+      "US",
+      "ATLANTA",
+      "GA",
+      "30303",
+      ""
+    ],
+    [
+      "US",
+      "MIAMI",
+      "FL",
+      "33131",
+      ""
+    ],
+    [
+      "US",
+      "DALLAS",
+      "TX",
+      "75201",
+      ""
+    ],
+    [
+      "US",
+      "SEATTLE",
+      "WA",
+      "98101",
+      ""
+    ],
+    [
+      "US",
+      "SAN FRANCISCO",
+      "CA",
+      "94105",
+      ""
+    ],
+    [
+      "US",
+      "DENVER",
+      "CO",
+      "80202",
+      ""
+    ],
+    [
+      "US",
+      "PHOENIX",
+      "AZ",
+      "85004",
+      ""
+    ],
+    [
+      "US",
+      "LAS VEGAS",
+      "NV",
+      "89101",
+      ""
+    ],
+    [
+      "US",
+      "MINNEAPOLIS",
+      "MN",
+      "55402",
+      ""
+    ],
+    [
+      "US",
+      "DETROIT",
+      "MI",
+      "48226",
+      ""
+    ],
+    [
+      "US",
+      "PORTLAND",
+      "OR",
+      "97204",
+      ""
+    ],
+    [
+      "US",
+      "CHARLOTTE",
+      "NC",
+      "28202",
+      ""
+    ],
+    [
+      "US",
+      "NASHVILLE",
+      "TN",
+      "37219",
+      ""
+    ],
+    [
+      "US",
+      "WASHINGTON",
+      "DC",
+      "20001",
+      ""
+    ],
+    [
+      "US",
+      "OMAHA",
+      "NE",
+      "68102",
+      ""
+    ],
+    [
+      "US",
+      "ALEXANDRIA",
+      "VA",
+      "22121",
+      ""
+    ],
+    [
+      "CA",
+      "TORONTO",
+      "ON",
+      "M5H 1J9",
+      ""
+    ],
+    [
+      "CA",
+      "VANCOUVER",
+      "BC",
+      "V6E 3P3",
+      ""
+    ],
+    [
+      "GB",
+      "LONDON",
+      "",
+      "EC2A 3EJ",
+      ""
+    ],
+    [
+      "GB",
+      "MANCHESTER",
+      "",
+      "M3 1AZ",
+      ""
+    ],
+    [
+      "IE",
+      "DUBLIN",
+      "",
+      "D02 X285",
+      ""
+    ],
+    [
+      "FR",
+      "PARIS",
+      "",
+      "75002",
+      ""
+    ],
+    [
+      "FR",
+      "LYON",
+      "",
+      "69002",
+      ""
+    ],
+    [
+      "DE",
+      "BERLIN",
+      "",
+      "10117",
+      ""
+    ],
+    [
+      "DE",
+      "MUNICH",
+      "",
+      "80331",
+      "MÜNCHEN"
+    ],
+    [
+      "IT",
+      "ROMA",
+      "",
+      "00186",
+      "ROME"
+    ],
+    [
+      "IT",
+      "MILANO",
+      "",
+      "20121",
+      "MILAN"
+    ],
+    [
+      "ES",
+      "MADRID",
+      "",
+      "28014",
+      ""
+    ],
+    [
+      "ES",
+      "BARCELONA",
+      "",
+      "08002",
+      ""
+    ],
+    [
+      "PT",
+      "LISBOA",
+      "",
+      "1100-148",
+      "LISBON"
+    ],
+    [
+      "NL",
+      "AMSTERDAM",
+      "",
+      "1012 JS",
+      ""
+    ],
+    [
+      "BE",
+      "BRUSSELS",
+      "",
+      "1000",
+      "BRUXELLES|BRUSSEL"
+    ],
+    [
+      "CH",
+      "ZURICH",
+      "",
+      "8001",
+      "ZÜRICH"
+    ],
+    [
+      "AT",
+      "VIENNA",
+      "",
+      "1010",
+      "WIEN"
+    ],
+    [
+      "PL",
+      "WARSAW",
+      "",
+      "00-001",
+      "WARSZAWA"
+    ],
+    [
+      "CZ",
+      "PRAGUE",
+      "",
+      "110 00",
+      "PRAHA"
+    ],
+    [
+      "DK",
+      "COPENHAGEN",
+      "",
+      "1050",
+      "KØBENHAVN"
+    ],
+    [
+      "SE",
+      "STOCKHOLM",
+      "",
+      "111 22",
+      ""
+    ],
+    [
+      "NO",
+      "OSLO",
+      "",
+      "0150",
+      ""
+    ],
+    [
+      "FI",
+      "HELSINKI",
+      "",
+      "00100",
+      ""
+    ],
+    [
+      "GR",
+      "ATHENS",
+      "",
+      "105 58",
+      "ATHINA"
+    ],
+    [
+      "AU",
+      "SYDNEY",
+      "NSW",
+      "2000",
+      ""
+    ],
+    [
+      "NZ",
+      "AUCKLAND",
+      "",
+      "1010",
+      ""
+    ],
+    [
+      "JP",
+      "TOKYO",
+      "",
+      "100-0005",
+      "東京"
+    ],
+    [
+      "CN",
+      "BEIJING",
+      "",
+      "100000",
+      "北京"
+    ],
+    [
+      "HK",
+      "CENTRAL",
+      "",
+      "",
+      "中環"
+    ],
+    [
+      "TW",
+      "TAIPEI",
+      "",
+      "100",
+      "台北"
+    ],
+    [
+      "KR",
+      "SEOUL",
+      "",
+      "04524",
+      "서울"
+    ],
+    [
+      "SG",
+      "SINGAPORE",
+      "",
+      "018960",
+      ""
+    ],
+    [
+      "IN",
+      "MUMBAI",
+      "MH",
+      "400001",
+      ""
+    ],
+    [
+      "MY",
+      "KUALA LUMPUR",
+      "",
+      "50000",
+      ""
+    ],
+    [
+      "TH",
+      "BANGKOK",
+      "",
+      "10110",
+      ""
+    ],
+    [
+      "ID",
+      "JAKARTA",
+      "",
+      "10110",
+      ""
+    ],
+    [
+      "PH",
+      "MANILA",
+      "",
+      "1000",
+      ""
+    ],
+    [
+      "VN",
+      "HANOI",
+      "",
+      "100000",
+      "HÀ NỘI"
+    ],
+    [
+      "AE",
+      "DUBAI",
+      "",
+      "",
+      "دبي"
+    ],
+    [
+      "SA",
+      "RIYADH",
+      "",
+      "12211",
+      ""
+    ],
+    [
+      "QA",
+      "DOHA",
+      "",
+      "",
+      ""
+    ],
+    [
+      "IL",
+      "TEL AVIV",
+      "",
+      "6100001",
+      ""
+    ],
+    [
+      "TR",
+      "ISTANBUL",
+      "",
+      "34000",
+      "İSTANBUL"
+    ],
+    [
+      "ZA",
+      "CAPE TOWN",
+      "",
+      "8001",
+      ""
+    ],
+    [
+      "BR",
+      "SAO PAULO",
+      "SP",
+      "04571-010",
+      "SÃO PAULO"
+    ],
+    [
+      "BR",
+      "RIO DE JANEIRO",
+      "RJ",
+      "20040-006",
+      ""
+    ],
+    [
+      "MX",
+      "CIUDAD DE MEXICO",
+      "CDMX",
+      "06600",
+      "MEXICO CITY"
+    ],
+    [
+      "MX",
+      "MONTERREY",
+      "NL",
+      "64000",
+      ""
+    ],
+    [
+      "AR",
+      "BUENOS AIRES",
+      "",
+      "C1001",
+      ""
+    ],
+    [
+      "CL",
+      "SANTIAGO",
+      "",
+      "8320000",
+      ""
+    ],
+    [
+      "CO",
+      "BOGOTA",
+      "",
+      "110111",
+      "BOGOTÁ"
+    ],
+    [
+      "PE",
+      "LIMA",
+      "",
+      "15001",
+      ""
+    ],
+    [
+      "EC",
+      "QUITO",
+      "",
+      "170101",
+      ""
+    ]
+  ],
+  "patterns": {
+    "US": "\\d{5}(?:-\\d{4})?",
+    "CA": "[A-Z]\\d[A-Z]\\s?\\d[A-Z]\\d",
+    "GB": "(?:GIR\\s?0AA|[A-Z]{1,2}\\d[A-Z\\d]?\\s?\\d[A-Z]{2})",
+    "IE": "[A-Z]\\d{2}\\s?[A-Z\\d]{4}",
+    "BR": "\\d{5}-?\\d{3}",
+    "JP": "\\d{3}-\\d{4}",
+    "PT": "\\d{4}-\\d{3}",
+    "NL": "\\d{4}\\s?[A-Z]{2}",
+    "PL": "\\d{2}-\\d{3}",
+    "CZ": "\\d{3}\\s?\\d{2}",
+    "SE": "\\d{3}\\s?\\d{2}",
+    "GR": "\\d{3}\\s?\\d{2}",
+    "AR": "[A-Z]\\d{4}(?:[A-Z]{3})?",
+    "FR": "\\d{5}",
+    "DE": "\\d{5}",
+    "IT": "\\d{5}",
+    "ES": "\\d{5}",
+    "KR": "\\d{5}",
+    "MY": "\\d{5}",
+    "TH": "\\d{5}",
+    "ID": "\\d{5}",
+    "MX": "\\d{5}",
+    "SA": "\\d{5}",
+    "TR": "\\d{5}",
+    "BE": "\\d{4}",
+    "CH": "\\d{4}",
+    "AT": "\\d{4}",
+    "DK": "\\d{4}",
+    "NO": "\\d{4}",
+    "AU": "\\d{4}",
+    "NZ": "\\d{4}",
+    "ZA": "\\d{4}",
+    "PH": "\\d{4}",
+    "FI": "\\d{5}",
+    "CN": "\\d{6}",
+    "SG": "\\d{6}",
+    "IN": "\\d{6}",
+    "VN": "\\d{6}",
+    "CO": "\\d{6}",
+    "PE": "\\d{6}",
+    "EC": "\\d{6}",
+    "TW": "\\d{3}(?:\\d{2,3})?",
+    "IL": "\\d{7}",
+    "CL": "\\d{7}"
+  },
+  "subdivisions": {
+    "US": {
+      "MA": "MASSACHUSETTS",
+      "RI": "RHODE ISLAND",
+      "NY": "NEW YORK",
+      "IL": "ILLINOIS",
+      "PA": "PENNSYLVANIA",
+      "GA": "GEORGIA",
+      "FL": "FLORIDA",
+      "TX": "TEXAS",
+      "WA": "WASHINGTON",
+      "CA": "CALIFORNIA",
+      "CO": "COLORADO",
+      "AZ": "ARIZONA",
+      "NV": "NEVADA",
+      "MN": "MINNESOTA",
+      "MI": "MICHIGAN",
+      "OR": "OREGON",
+      "NC": "NORTH CAROLINA",
+      "TN": "TENNESSEE",
+      "DC": "DISTRICT OF COLUMBIA",
+      "NE": "NEBRASKA",
+      "VA": "VIRGINIA"
+    },
+    "CA": {
+      "ON": "ONTARIO",
+      "BC": "BRITISH COLUMBIA"
+    },
+    "BR": {
+      "SP": "SAO PAULO",
+      "RJ": "RIO DE JANEIRO"
+    },
+    "AU": {
+      "NSW": "NEW SOUTH WALES"
+    },
+    "IN": {
+      "MH": "MAHARASHTRA"
+    },
+    "MX": {
+      "CDMX": "CIUDAD DE MEXICO",
+      "NL": "NUEVO LEON"
+    }
+  }
+}

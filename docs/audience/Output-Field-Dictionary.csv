@@ -1,0 +1,92 @@
+﻿Field,Export scope,Meaning
+Name,Both,Original standard source field; Group is metadata only. See Operations section 2.
+Address1,Both,Original standard source field; Group is metadata only. See Operations section 2.
+Address2,Both,Original standard source field; Group is metadata only. See Operations section 2.
+Address3,Both,Original standard source field; Group is metadata only. See Operations section 2.
+Bank_Country,Both,Original standard source field; Group is metadata only. See Operations section 2.
+Group,Both,Original standard source field; Group is metadata only. See Operations section 2.
+Parsed_Name,Full analysis,"Evaluated, untruncated Name after supported Address1 interpretation or review edits."
+Name_Source_Length,Full analysis,Length of normalized original dedicated Name field before cross-field interpretation.
+Name_Evaluated_Length,Full analysis,Length of assembled/current evaluated Name before the66-character output cap.
+Name_Retained_Length,Full analysis,Evaluated Name length capped at66 for Hybrid output.
+Name_Record_Count,Full analysis,Number of stored1/ records (normally one or two when Name is present).
+Name_Confidence,Full analysis,Heuristic placement/classification confidence; not identity verification.
+Name_Source,Full analysis,"SOURCE_NAME, CROSS_FIELD_NAME, human review/edit source or legacy marker."
+Name_Interpretation_Check,Full analysis,PASS or REVIEW_REQUIRED for current Name classification; NOT_EVALUATED for legacy data.
+Name_Evidence,Full analysis,JSON Name evidence and interpretation details.
+Name_Interpretation_Audit,Full analysis,"JSON Name actions, source fragments and before/after Name/Address1 values."
+Name_Review_Issues,Full analysis,JSON list of unresolved Name interpretation findings.
+Name_Truncation_Audit,Full analysis,JSON audit of evaluated Name content removed after character66.
+Parsed_Primary_Address,Full analysis,Normalized logical primary address proposed after locality removal.
+Parsed_Secondary_Address,Full analysis,Normalized logical secondary address; surviving overflow lines may be merged.
+Parsed_Town,Full analysis,Current structured town candidate before output-length truncation.
+Parsed_State_Province,Full analysis,Current structured subdivision code/value.
+Parsed_Postal,Full analysis,"Recognized postal text, retaining country-specific zeros/spaces/hyphens."
+Parsed_Country,Full analysis,Selected structured country candidate; output may use ZZ if unresolved.
+Parser_Country_Source,Full analysis,Legacy-named field recording the selected country source.
+Enriched_Town_Candidate,Full analysis,Current town candidate value.
+Town_Probability,Full analysis,Heuristic town confidence from 0 to 1; not calibrated probability.
+Town_Source,Full analysis,Evidence/source label for the current town candidate.
+Town_Promoted,Full analysis,Boolean: town score meets the initial 0.90 threshold; not automatic-resolution proof.
+Enriched_Country_Candidate,Full analysis,Current country candidate value.
+Country_Probability,Full analysis,Heuristic country confidence from 0 to 1; not calibrated probability.
+Country_Source,Full analysis,Evidence/source label for the current country candidate.
+Country_Authority,Full analysis,"BANK_IDENTIFIER, ADDRESS_INFERENCE, HUMAN_REVIEW or UNRESOLVED."
+Country_Promoted,Full analysis,Boolean: country score meets the initial 0.92 threshold; other gates still apply.
+Enriched_Subdivision,Full analysis,Current inferred/recognized subdivision value.
+Enriched_Subdivision_Name,Full analysis,Subdivision display name where available; otherwise value/code.
+Subdivision_Source,Full analysis,Evidence/source label for subdivision.
+Enriched_Postal,Full analysis,Current recognized postal candidate value.
+Postal_Source,Full analysis,"Postal source, such as exact reference match, pattern or human edit."
+Sanitized_Address1,Full analysis,Normalized surviving content from the corresponding source address container after audited locality removal.
+Sanitized_Address2,Full analysis,Normalized surviving content from the corresponding source address container after audited locality removal.
+Sanitized_Address3,Full analysis,Normalized surviving content from the corresponding source address container after audited locality removal.
+Locality_Removal_Audit,Full analysis,"JSON entries showing structured locality removal, source field, before/after and reason."
+Candidate_1a,Full analysis,Prefixed candidate 1a before four-line priority selection; may not appear in final output.
+Candidate_1b,Full analysis,Prefixed candidate 1b before four-line priority selection; may not appear in final output.
+Candidate_2a,Full analysis,Prefixed candidate 2a before four-line priority selection; may not appear in final output.
+Candidate_2z,Full analysis,Prefixed candidate 2z before four-line priority selection; may not appear in final output.
+Candidate_2c,Full analysis,Prefixed candidate 2c before four-line priority selection; may not appear in final output.
+Candidate_2b,Full analysis,Prefixed candidate 2b before four-line priority selection; may not appear in final output.
+Candidate_2d,Full analysis,Prefixed candidate 2d before four-line priority selection; may not appear in final output.
+Candidate_3a,Full analysis,Prefixed candidate 3a before four-line priority selection; may not appear in final output.
+Hybrid_Line1,Both,Stored final transformed Hybrid line 1; blank when fewer output lines exist.
+Hybrid_Line2,Both,Stored final transformed Hybrid line 2; blank when fewer output lines exist.
+Hybrid_Line3,Both,Stored final transformed Hybrid line 3; blank when fewer output lines exist.
+Hybrid_Line4,Both,Stored final transformed Hybrid line 4; blank when fewer output lines exist.
+Hybrid_Status,Full analysis,System processing status; acceptance does not replace this status.
+Hybrid_Review_Required,Full analysis,Boolean: reviewState is PENDING; accepted-with-issues rows can be false.
+Review_State,Full analysis,"PENDING, ACCEPTED, APPROVED (legacy), REJECTED or NONE."
+Output_Accepted,Full analysis,Boolean: reviewState is ACCEPTED.
+Accepted_With_Issues,Full analysis,Boolean: accepted decision with retained unresolved/system findings.
+Accepted_By,Full analysis,"Reviewer on the latest accepted output; new reviews record the authenticated username, while historical reviewer text is preserved."
+Accepted_At,Full analysis,Timestamp of the latest ACCEPT event.
+Acceptance_Reason,Full analysis,Reason/note supplied with the latest ACCEPT event.
+PMPG_Hybrid_Validation,Full analysis,"PASS, FAIL or NOT_APPLICABLE for the implemented internal profile."
+PMPG_Duplication_Check,Full analysis,PASS or FAIL for structured town/country duplication checks.
+PMPG_Validation_Issues,Full analysis,JSON list of validation messages and retained conflicts.
+Evidence_Conflict,Full analysis,JSON list of evidence-conflict messages; not a simple boolean in Results.
+Hybrid_Data_Dropped,Full analysis,"JSON audit of truncation/priority loss with field, value and reason."
+Hybrid_Truncation_Audit,Full analysis,JSON audit of source-length truncation.
+Hybrid_Length_Validation,Full analysis,PASS or FAIL for output-length checks.
+Enrichment_Evidence,Full analysis,"JSON country/town/postal/subdivision candidates, evidence and alternatives."
+Processing_Notes,Full analysis,JSON combination of transformation notes and system review reasons.
+Review_History,Full analysis,JSON review events; acceptance events include exact output/validation snapshots.
+Group Details,"Both, when supplied","Additional source metadata; preserved, never analyzed."
+Key Field,"Both, when supplied",Business key preserved as source metadata; application does not enforce uniqueness.
+Record_ID,Full analysis,Unique internal result identifier; independent of source key.
+Source_Record_Key,Full analysis,Optional mapped key as displayed in the source workbook; duplicate/blank keys are retained.
+Source_Worksheet_Row,Full analysis,Original worksheet row number including the header; mapped imports only.
+Import mapping,Full analysis Summary and Audit,"Selected worksheet, main-field mappings, key column and original headers; complete mapping is in Audit chunks."
+Postal_Lookup_Enabled,Full analysis,Boolean captured for automatic postal-derived town lookup when the batch started; manual lookup follows the current application toggle.
+Auto_Approve_NOTPROVIDED_City,Full analysis,"Retired in v1.9.1; retained only inside archived historical settings/audit, not generated as an active Results column."
+Auto_Approved,Full analysis,Historical indicator: current acceptance originated from a previously available system rule. No new automatic town approvals are created.
+Acceptance_Origin,Full analysis,AUTOMATIC_UNRESOLVED_TOWN for the current system rule; historical AUTOMATIC_NOTPROVIDED_CITY values are retained; blank for human acceptance.
+Auto_Approve_Unresolved_Town,Full analysis,"Retired in v1.9.1; retained only inside archived historical settings/audit, not generated as an active Results column."
+Review_Decision,Full analysis,PASS/FAIL/PENDING/NONE; legacy corresponding decisions are classified without rewriting their history.
+Decision_Initials,Full analysis,Historical entered initials; blank for new decisions attributed to the signed-in account.
+Decision_At,Full analysis,Timestamp of the latest recorded decision.
+Decision_Reason,Full analysis,Empty for new Pass decisions; entered reason for Fail; historical reason retained for legacy decisions.
+Output_Failed,Full analysis,True for FAILED and historical REJECTED review states.
+Decision_User,Full analysis,Authenticated username recorded at decision time; blank for events without an authenticated actor.
+Decision_User_ID,Full analysis,Stable authenticated account ID recorded at decision time; retained after account deletion.

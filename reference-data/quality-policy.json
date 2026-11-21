@@ -1,0 +1,10 @@
+{
+ "normalizationVersion":3,
+ "nonPostalProofCountries":["AE","HK","MO"],
+ "reason":"Do not use source-supplied location/regional identifiers as proof of a postal town pending current postal-operator confirmation. Preserve source rows in the catalog and leave input data unchanged.",
+ "areaOnlyCountries":["CL","IE","MT","AR"],
+ "majorCodeCountries":["BR","CN"],
+ "references":["https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/areEn.pdf","https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/hkgEn.pdf","https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/macEn.pdf","https://download.geonames.org/export/zip/readme.txt"],
+ "reviewedAt":"2026-11-07",
+ "note":"UPU country sheets have different publication dates; this conservative exclusion is not a claim that these countries can never introduce postal codes. Reassess when operator-confirmed data is available."
+}

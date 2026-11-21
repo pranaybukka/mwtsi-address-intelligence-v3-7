@@ -1,0 +1,7 @@
+import type {AuthUser} from '@/lib/auth-types';
+import {requireUploadGroup} from '@/db/workspace-resources';
+import {withEntitlement} from '@/lib/auth';
+import ExcelJS from 'exceljs';
+async function GETHandler(request=new Request('http://localhost/api/template'),_context?:unknown,user?:AuthUser){if(user)requireUploadGroup(user);const dual=new URL(request.url).searchParams.get('profile')==='BNP_ORP';const w=new ExcelJS.Workbook();const s=w.addWorksheet('Addresses');s.addRow(['Name','Address1','Address2','Address3','Bank_Country','Group','Reference_ID','Notes']);s.addRow(['EXAMPLE BENEFICIARY','HOOGSTRAAT 6','18TH FLOOR','BRUSSELS 1000 BELGIUM','',user?.role==='User'?user.group!:'Example group','REF-001','Preserved without analysis']);if(dual){s.spliceRows(1,2,['BNP_Name','BNP_Address1','BNP_Address2','BNP_Address3','BNP_Bank_Country','ORP_Name','ORP_Address1','ORP_Address2','ORP_Address3','ORP_Bank_Country','Group','Key Field','Notes'],['BNP EXAMPLE','125 CEDAR VALE AVENUE','','BOSTON MA 02110','US','ORP EXAMPLE','100 EXAMPLE ROAD','','BERLIN 10117 GERMANY','DE',user?.role==='User'?user.group!:'Example group','DUAL-001','Preserved']);}s.columns.forEach(c=>c.width=30);return new Response(new Uint8Array(await w.xlsx.writeBuffer()),{headers:{'Content-Type':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','Content-Disposition':'attachment; filename="address-template.xlsx"'}});}
+
+export const GET=withEntitlement(GETHandler,'uploadAddresses');

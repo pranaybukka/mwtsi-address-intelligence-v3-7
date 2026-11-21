@@ -1,0 +1,32 @@
+[
+  {
+    "message": "pacs.008.001.08",
+    "source": "https://www.iso20022.org/message/14231/download",
+    "catalogue": "https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pacs.008",
+    "sha256": "cf048155f70cacd03f1f1dfadf66cba8752be93c249c267351782fd6adb023f7"
+  },
+  {
+    "message": "pacs.009.001.08",
+    "source": "https://www.iso20022.org/message/14271/download",
+    "catalogue": "https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pacs.008",
+    "sha256": "2f695939eb9be156bf2f14a26fbeb0f3bead73037fb03fd219ad14ceb19905ec"
+  },
+  {
+    "message": "pain.001.001.09",
+    "source": "https://www.iso20022.org/message/14346/download",
+    "catalogue": "https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001",
+    "sha256": "de038b373e47b0077b1832ddd81f4b2f1eb25d35721f62da1e38b7f5a09fda24"
+  },
+  {
+    "message": "head.001.001.02",
+    "source": "https://www.iso20022.org/message/19186/download",
+    "catalogue": "https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=head.001",
+    "sha256": "730d4f342859b57be250b4215973adc36c7e60b0c48f171e1b4b5584dc355247"
+  },
+  {
+    "message": "head.001.001.03",
+    "source": "https://www.iso20022.org/message/23103/download",
+    "catalogue": "https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=head.001",
+    "sha256": "c5a71062ad04a7af4cc178e9946d8c83fe99172fa0f491e0555c7f8903676e62"
+  }
+]

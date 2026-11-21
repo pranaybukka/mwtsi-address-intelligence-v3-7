@@ -1,0 +1,498 @@
+{
+  "release": "2.0.0",
+  "createdAt": "2026-11-09T03:08:14.736Z",
+  "productionBuildId": "jyseKLjpmBXl_k_PhD6Ig",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.22.1",
+    "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "logicalCpus": 3,
+    "availableParallelism": 2,
+    "hostMemoryGiB": 9.7,
+    "cgroupCpuMax": "200000 100000",
+    "cgroupMemoryMax": "8589934592"
+  },
+  "workload": {
+    "records": 18000,
+    "groups": 10,
+    "durationSeconds": 30,
+    "warmupSeconds": 5,
+    "thinkTimeMs": 1000,
+    "authenticatedSessions": true,
+    "groupScopedUsers": true,
+    "readsAndReservationsAndDecisions": true,
+    "backgroundImportRows": 1000,
+    "backgroundExportRows": 18000,
+    "backgroundExportFormat": "full",
+    "responseBytes": "Decoded HTTP body bytes",
+    "loginHashingIncluded": false,
+    "browserRenderingIncluded": false,
+    "referenceSnapshot": "14a75cba24111e3ce1fb"
+  },
+  "targets": {
+    "pageP95Ms": 500,
+    "decisionP95Ms": 1000,
+    "unexpectedErrors": 0,
+    "backgroundJobs": "COMPLETED"
+  },
+  "phases": [
+    {
+      "users": 5,
+      "elapsedSeconds": 30.954,
+      "requests": 478,
+      "requestsPerSecond": 15.4,
+      "unexpectedErrors": 0,
+      "operations": {
+        "page": {
+          "requests": 148,
+          "errors": 0,
+          "p50Ms": 6,
+          "p95Ms": 22.5,
+          "p99Ms": 209.8,
+          "maxMs": 220.4,
+          "meanResponseBytes": 67961,
+          "httpStatuses": {
+            "200": 148
+          }
+        },
+        "permissionGuard": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 11.6,
+          "p95Ms": 11.6,
+          "p99Ms": 11.6,
+          "maxMs": 11.6,
+          "meanResponseBytes": 41,
+          "httpStatuses": {
+            "403": 1
+          }
+        },
+        "exportQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 202.8,
+          "p95Ms": 202.8,
+          "p99Ms": 202.8,
+          "maxMs": 202.8,
+          "meanResponseBytes": 433,
+          "httpStatuses": {
+            "202": 1
+          }
+        },
+        "dashboard": {
+          "requests": 30,
+          "errors": 0,
+          "p50Ms": 3.2,
+          "p95Ms": 193.4,
+          "p99Ms": 222.9,
+          "maxMs": 222.9,
+          "meanResponseBytes": 691,
+          "httpStatuses": {
+            "200": 30
+          }
+        },
+        "claim": {
+          "requests": 148,
+          "errors": 0,
+          "p50Ms": 4.2,
+          "p95Ms": 21.9,
+          "p99Ms": 48.7,
+          "maxMs": 55.8,
+          "meanResponseBytes": 4548,
+          "httpStatuses": {
+            "200": 148
+          }
+        },
+        "decision": {
+          "requests": 148,
+          "errors": 0,
+          "p50Ms": 5.2,
+          "p95Ms": 24.8,
+          "p99Ms": 55.6,
+          "maxMs": 56.3,
+          "meanResponseBytes": 5598,
+          "httpStatuses": {
+            "200": 148
+          }
+        },
+        "importPreview": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 339.8,
+          "p95Ms": 339.8,
+          "p99Ms": 339.8,
+          "maxMs": 339.8,
+          "meanResponseBytes": 484,
+          "httpStatuses": {
+            "200": 1
+          }
+        },
+        "importQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 110,
+          "p95Ms": 110,
+          "p99Ms": 110,
+          "maxMs": 110,
+          "meanResponseBytes": 271,
+          "httpStatuses": {
+            "202": 1
+          }
+        }
+      },
+      "background": {
+        "importRows": 1000,
+        "importStatus": "COMPLETED",
+        "exportRows": 18000,
+        "exportFormat": "full",
+        "exportStatus": "COMPLETED",
+        "downloadBytes": 15864647
+      },
+      "meetsTargets": true
+    },
+    {
+      "users": 10,
+      "elapsedSeconds": 30.867,
+      "requests": 964,
+      "requestsPerSecond": 31.2,
+      "unexpectedErrors": 0,
+      "operations": {
+        "page": {
+          "requests": 300,
+          "errors": 0,
+          "p50Ms": 4.1,
+          "p95Ms": 20.8,
+          "p99Ms": 40.7,
+          "maxMs": 55,
+          "meanResponseBytes": 67964,
+          "httpStatuses": {
+            "200": 300
+          }
+        },
+        "permissionGuard": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 42.5,
+          "p95Ms": 42.5,
+          "p99Ms": 42.5,
+          "maxMs": 42.5,
+          "meanResponseBytes": 41,
+          "httpStatuses": {
+            "403": 1
+          }
+        },
+        "exportQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 53.8,
+          "p95Ms": 53.8,
+          "p99Ms": 53.8,
+          "maxMs": 53.8,
+          "meanResponseBytes": 433,
+          "httpStatuses": {
+            "202": 1
+          }
+        },
+        "dashboard": {
+          "requests": 60,
+          "errors": 0,
+          "p50Ms": 2.1,
+          "p95Ms": 29.7,
+          "p99Ms": 56.7,
+          "maxMs": 56.7,
+          "meanResponseBytes": 692,
+          "httpStatuses": {
+            "200": 60
+          }
+        },
+        "claim": {
+          "requests": 300,
+          "errors": 0,
+          "p50Ms": 2.5,
+          "p95Ms": 32.1,
+          "p99Ms": 52.7,
+          "maxMs": 89,
+          "meanResponseBytes": 4549,
+          "httpStatuses": {
+            "200": 300
+          }
+        },
+        "decision": {
+          "requests": 300,
+          "errors": 0,
+          "p50Ms": 4,
+          "p95Ms": 30.5,
+          "p99Ms": 61.1,
+          "maxMs": 69.9,
+          "meanResponseBytes": 5599,
+          "httpStatuses": {
+            "200": 300
+          }
+        },
+        "importPreview": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 157.9,
+          "p95Ms": 157.9,
+          "p99Ms": 157.9,
+          "maxMs": 157.9,
+          "meanResponseBytes": 484,
+          "httpStatuses": {
+            "200": 1
+          }
+        },
+        "importQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 40.4,
+          "p95Ms": 40.4,
+          "p99Ms": 40.4,
+          "maxMs": 40.4,
+          "meanResponseBytes": 271,
+          "httpStatuses": {
+            "202": 1
+          }
+        }
+      },
+      "background": {
+        "importRows": 1000,
+        "importStatus": "COMPLETED",
+        "exportRows": 18000,
+        "exportFormat": "full",
+        "exportStatus": "COMPLETED",
+        "downloadBytes": 16027364
+      },
+      "meetsTargets": true
+    },
+    {
+      "users": 25,
+      "elapsedSeconds": 30.999,
+      "requests": 2362,
+      "requestsPerSecond": 76.2,
+      "unexpectedErrors": 0,
+      "operations": {
+        "page": {
+          "requests": 736,
+          "errors": 0,
+          "p50Ms": 4.2,
+          "p95Ms": 38.2,
+          "p99Ms": 63.6,
+          "maxMs": 131.4,
+          "meanResponseBytes": 67981,
+          "httpStatuses": {
+            "200": 736
+          }
+        },
+        "permissionGuard": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 60.8,
+          "p95Ms": 60.8,
+          "p99Ms": 60.8,
+          "maxMs": 60.8,
+          "meanResponseBytes": 41,
+          "httpStatuses": {
+            "403": 1
+          }
+        },
+        "exportQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 66.2,
+          "p95Ms": 66.2,
+          "p99Ms": 66.2,
+          "maxMs": 66.2,
+          "meanResponseBytes": 433,
+          "httpStatuses": {
+            "202": 1
+          }
+        },
+        "dashboard": {
+          "requests": 150,
+          "errors": 0,
+          "p50Ms": 2.5,
+          "p95Ms": 54.5,
+          "p99Ms": 137.3,
+          "maxMs": 140.8,
+          "meanResponseBytes": 695,
+          "httpStatuses": {
+            "200": 150
+          }
+        },
+        "claim": {
+          "requests": 736,
+          "errors": 0,
+          "p50Ms": 2.6,
+          "p95Ms": 47.9,
+          "p99Ms": 131.5,
+          "maxMs": 202.5,
+          "meanResponseBytes": 4549,
+          "httpStatuses": {
+            "200": 736
+          }
+        },
+        "decision": {
+          "requests": 736,
+          "errors": 0,
+          "p50Ms": 4.2,
+          "p95Ms": 49.8,
+          "p99Ms": 154.5,
+          "maxMs": 197.8,
+          "meanResponseBytes": 5600,
+          "httpStatuses": {
+            "200": 736
+          }
+        },
+        "importPreview": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 240.4,
+          "p95Ms": 240.4,
+          "p99Ms": 240.4,
+          "maxMs": 240.4,
+          "meanResponseBytes": 484,
+          "httpStatuses": {
+            "200": 1
+          }
+        },
+        "importQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 41.9,
+          "p95Ms": 41.9,
+          "p99Ms": 41.9,
+          "maxMs": 41.9,
+          "meanResponseBytes": 271,
+          "httpStatuses": {
+            "202": 1
+          }
+        }
+      },
+      "background": {
+        "importRows": 1000,
+        "importStatus": "COMPLETED",
+        "exportRows": 18000,
+        "exportFormat": "full",
+        "exportStatus": "COMPLETED",
+        "downloadBytes": 16287736
+      },
+      "meetsTargets": true
+    },
+    {
+      "users": 50,
+      "elapsedSeconds": 30.905,
+      "requests": 4483,
+      "requestsPerSecond": 145.1,
+      "unexpectedErrors": 0,
+      "operations": {
+        "page": {
+          "requests": 1393,
+          "errors": 0,
+          "p50Ms": 5.7,
+          "p95Ms": 112.2,
+          "p99Ms": 184.7,
+          "maxMs": 388.6,
+          "meanResponseBytes": 68006,
+          "httpStatuses": {
+            "200": 1393
+          }
+        },
+        "permissionGuard": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 103,
+          "p95Ms": 103,
+          "p99Ms": 103,
+          "maxMs": 103,
+          "meanResponseBytes": 41,
+          "httpStatuses": {
+            "403": 1
+          }
+        },
+        "exportQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 136.7,
+          "p95Ms": 136.7,
+          "p99Ms": 136.7,
+          "maxMs": 136.7,
+          "meanResponseBytes": 433,
+          "httpStatuses": {
+            "202": 1
+          }
+        },
+        "dashboard": {
+          "requests": 300,
+          "errors": 0,
+          "p50Ms": 4,
+          "p95Ms": 122.3,
+          "p99Ms": 320,
+          "maxMs": 389.1,
+          "meanResponseBytes": 698,
+          "httpStatuses": {
+            "200": 300
+          }
+        },
+        "claim": {
+          "requests": 1393,
+          "errors": 0,
+          "p50Ms": 4.1,
+          "p95Ms": 158.4,
+          "p99Ms": 255.1,
+          "maxMs": 419.7,
+          "meanResponseBytes": 4549,
+          "httpStatuses": {
+            "200": 1393
+          }
+        },
+        "decision": {
+          "requests": 1393,
+          "errors": 0,
+          "p50Ms": 5.6,
+          "p95Ms": 144,
+          "p99Ms": 278.4,
+          "maxMs": 417.3,
+          "meanResponseBytes": 5598,
+          "httpStatuses": {
+            "200": 1393
+          }
+        },
+        "importPreview": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 460.6,
+          "p95Ms": 460.6,
+          "p99Ms": 460.6,
+          "maxMs": 460.6,
+          "meanResponseBytes": 484,
+          "httpStatuses": {
+            "200": 1
+          }
+        },
+        "importQueue": {
+          "requests": 1,
+          "errors": 0,
+          "p50Ms": 31.2,
+          "p95Ms": 31.2,
+          "p99Ms": 31.2,
+          "maxMs": 31.2,
+          "meanResponseBytes": 271,
+          "httpStatuses": {
+            "202": 1
+          }
+        }
+      },
+      "background": {
+        "importRows": 1000,
+        "importStatus": "COMPLETED",
+        "exportRows": 18000,
+        "exportFormat": "full",
+        "exportStatus": "COMPLETED",
+        "downloadBytes": 16763873
+      },
+      "meetsTargets": true
+    }
+  ],
+  "limitations": "Short synthetic single-host test. Not a sustained production capacity certification. Browser rendering, WAN/TLS/proxy behavior, login bursts and real human think times are not measured."
+}

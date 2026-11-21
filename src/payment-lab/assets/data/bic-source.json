@@ -1,0 +1,19 @@
+{
+  "name": "Your ISOBIC directory",
+  "asOf": null,
+  "count": 147541,
+  "sourceRecords": 110909,
+  "isoBicFormat": true,
+  "bic8Records": 36632,
+  "bic11Records": 110909,
+  "latestRecordUpdate": "2026-11-14",
+  "countries": 231,
+  "duplicatesRemoved": 0,
+  "kind": "provided",
+  "importedAt": "2026-11-14T20:25:42.344Z",
+  "coverage": "All BIC8 and BIC11 choices represented in the supplied ISOBIC.txt file. File snapshot date and current SWIFT connectivity are not independently verified.",
+  "source": "User-provided ISOBIC.txt",
+  "license": "User-provided data; retained in this private Site",
+  "sha256": "434fe238bbaca8b7d4943ff7a098216363a71c9d6fd2860746b094d3925b0612",
+  "sourceSha256": "33656f8df3219ab5ada97451afe89c8702ec5caf52850dd490c28a8a55bba82d"
+}

@@ -1,0 +1,20 @@
+{
+  "records": 20000,
+  "manifestMemberships": 34000,
+  "successfulManifestEvents": 3,
+  "overlapRecords": 4000,
+  "repeatedExportRecords": 12000,
+  "uniqueExported": 18000,
+  "remaining": 2000,
+  "groups": 10,
+  "perGroup": {
+    "total": 2000,
+    "exported": 1800,
+    "remaining": 200
+  },
+  "multiStatusDeduplication": "PASS",
+  "boundedPages": "PASS",
+  "manifestCommitMilliseconds": 526,
+  "remainingPageMeanMilliseconds": 123,
+  "limitations": "Isolated SQLite membership/count stress check using simulated completion events; not an Excel-generation, HTTP-concurrency or sustained capacity benchmark."
+}

@@ -1,0 +1,60 @@
+{
+  "name": "hybrid-address-remediation",
+  "version": "3.7.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx scripts/serve.ts dev",
+    "build": "next build",
+    "start": "tsx scripts/serve.ts start",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:import": "tsx scripts/import-reference.ts",
+    "regression": "tsx scripts/regression.ts",
+    "samples": "tsx scripts/samples.ts",
+    "test:e2e": "playwright test",
+    "regression:names": "tsx scripts/name-regression.ts",
+    "security:audit": "npm audit --audit-level=moderate",
+    "reference:install": "tsx scripts/reference-install.ts",
+    "reference:refresh": "tsx scripts/reference-install.ts --refresh",
+    "predev": "npm run reference:install",
+    "prestart": "npm run reference:install",
+    "worker": "tsx scripts/worker.ts",
+    "update": "node scripts/update.mjs",
+    "update:status": "node scripts/update.mjs --status",
+    "benchmark": "tsx scripts/benchmark.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "12.11.1",
+    "exceljs": "^4.4.0",
+    "i18n-iso-countries": "^7.14.0",
+    "jszip": "^3.10.2",
+    "lucide-react": "^0.468.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsx": "^4.20.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0",
+    "vitest": "4.1.12"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1",
+      "unzipper": "0.12.3",
+      "fast-csv": "5.0.7"
+    },
+    "archiver-utils": {
+      "glob": "14.0.4"
+    }
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

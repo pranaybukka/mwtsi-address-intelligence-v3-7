@@ -1,0 +1,92 @@
+{
+  "postalRelationships": 253,
+  "distinctPostalCodes": 253,
+  "countries": 44,
+  "towns": 102,
+  "examples": [
+    {
+      "postal": "10001",
+      "country": "US",
+      "town": "NEW YORK",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "90012",
+      "country": "US",
+      "town": "LOS ANGELES",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "02110",
+      "country": "US",
+      "town": "BOSTON",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "10001-1234",
+      "country": "US",
+      "town": "NEW YORK",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "3000",
+      "country": "AU",
+      "town": "MELBOURNE",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "SW1A 1AA",
+      "country": "GB",
+      "town": "LONDON",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "M5V 3L9",
+      "country": "CA",
+      "town": "TORONTO",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "100-0005",
+      "country": "JP",
+      "town": "TOKYO",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "75008",
+      "country": "FR",
+      "town": "PARIS",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "20095",
+      "country": "DE",
+      "town": "HAMBURG",
+      "source": "POSTAL_TOWN_LOOKUP",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "99999",
+      "country": "US",
+      "town": "",
+      "source": "UNRESOLVED",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    },
+    {
+      "postal": "10001",
+      "country": "",
+      "town": "",
+      "source": "UNRESOLVED",
+      "status": "PROPOSED_REVIEW_REQUIRED"
+    }
+  ]
+}
